@@ -17,13 +17,14 @@ use Illuminate\Http\Request;
 //    return 'Version 1.0.0';
 //});
 // Route::get('services', 'ServicesController@index')->middleware(['csrfvalidate']);
+
 Route::get('transactions/detail/{id}', 'TransactionsController@showWeb');
 Route::post('auth/register', 'AuthController@register');
 Route::post('auth/login', 'AuthController@login');
-Route::get('transactions/updateStatus', 'TransactionsController@updateStatus');
+ Route::get('transactions/updateStatus', 'TransactionsController@updateStatus');
 Route::group(['middleware' => ['jwt.auth']], function() {
-Route::post('auth/changePassword', 'AuthController@changePassword');
-Route::post('auth/logout', 'AuthController@logout');
+    Route::post('auth/changePassword', 'AuthController@changePassword');
+    Route::post('auth/logout', 'AuthController@logout');
 
 //Route::get('transactions/detail/{id}', 'TransactionsController@showWeb');
 

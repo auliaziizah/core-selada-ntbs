@@ -139,7 +139,7 @@ class AuthController extends Controller
                 {
                     $user->password = bcrypt($request->new_password);
                     $user->save();
-                    
+                    // ];
                     DB::commit();
                         $response = [
                             'status'    => true,
