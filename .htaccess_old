@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+RewriteRule ^ %1 [L,NE,R=302]
+
+RewriteRule ^((?!/api/core/public/).*)$ api/core/public/$1 [L,NC]
+
+
+Options -Indexes +FollowSymLinks
+
+# Hide a specific file
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
+

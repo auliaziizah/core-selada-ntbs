@@ -1,0 +1,31 @@
+*   Trying 43.218.7.56:443...
+* Connected to arrest.selada.id (43.218.7.56) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: CN=*.selada.id
+*  start date: Aug 25 00:00:00 2022 GMT
+*  expire date: Aug 28 23:59:59 2023 GMT
+*  subjectAltName: host "arrest.selada.id" matched cert's "*.selada.id"
+*  issuer: C=GB; ST=Greater Manchester; L=Salford; O=Sectigo Limited; CN=Sectigo RSA Domain Validation Secure Server CA
+*  SSL certificate verify result: self-signed certificate in certificate chain (19), continuing anyway.
+> POST /api HTTP/1.1
+Host: arrest.selada.id
+Accept: */*
+Content-Type: text/plain
+Connection: Keep-Alive
+Content-Length: 113
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< Date: Thu, 02 Feb 2023 07:40:26 GMT
+< Server: Apache/2.4.52 (Ubuntu)
+< Content-Type: text/plain
+< Content-Length: 329
+< Vary: Accept-Encoding
+< Keep-Alive: timeout=5, max=100
+< Connection: Keep-Alive
+< 
+* Connection #0 to host arrest.selada.id left intact
